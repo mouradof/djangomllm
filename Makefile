@@ -6,6 +6,7 @@ setup:
 	$(PIP) install -r requirements.txt
 
 migrate:
+	$(DJANGO_MANAGE) makemigrations
 	$(DJANGO_MANAGE) migrate
 
 run:
