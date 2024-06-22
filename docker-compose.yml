@@ -3,10 +3,8 @@ version: '3.8'
 services:
   web:
     build: .
-    ports:
-      - "8000:8000"
+    command: gunicorn --bind 0.0.0.0:8000 djangomllm.wsgi:application
     volumes:
       - .:/app
-    environment:
-      - DJANGO_SETTINGS_MODULE=djangomllm.settings
-    command: ["gunicorn", "--bind", "0.0.0.0:8000", "djangomllm.wsgi:application"]
+    ports:
+      - "8000:8000"

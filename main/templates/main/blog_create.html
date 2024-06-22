@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create Blog Post</title>
+    <title>{% load i18n %}{{ title }}</title>
 </head>
 <body>
-<h1>Create Blog Post</h1>
+<h1>{{ title }}</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Save</button>
+    <button type="submit">{{ save }}</button>
 </form>
-<a href="{% url 'blog_list' %}">Back to list</a>
+<a href="{% url 'blog_list' %}">{{ back_to_list }}</a>
+<a href="{% url 'set_language' %}?next={{ request.path }}&language=en">English</a> |
+<a href="{% url 'set_language' %}?next={{ request.path }}&language=fr">Français</a>
 </body>
 </html>

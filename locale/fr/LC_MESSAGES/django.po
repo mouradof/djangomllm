@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Blog Posts"
+msgstr "Articles de blog"
+
+msgid "Create a new post"
+msgstr "Créer un nouvel article"
+
+msgid "Create Blog Post"
+msgstr "Créer un article de blog"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "Back to list"
+msgstr "Retour à la liste"

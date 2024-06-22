@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Blog Posts</title>
+    <title>{% load i18n %}{{ title }}</title>
 </head>
 <body>
-<h1>Blog Posts</h1>
-<a href="{% url 'blog_create' %}">Create a new post</a>
+<h1>{{ title }}</h1>
+<a href="{% url 'blog_create' %}">{{ create_post }}</a>
 <ul>
     {% for post in posts %}
     <li>
@@ -15,5 +15,7 @@
     </li>
     {% endfor %}
 </ul>
+<a href="{% url 'set_language' %}?next={{ request.path }}&language=en">English</a> |
+<a href="{% url 'set_language' %}?next={{ request.path }}&language=fr">Français</a>
 </body>
 </html>
